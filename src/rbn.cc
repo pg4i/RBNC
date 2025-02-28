@@ -34,7 +34,7 @@ void
 RBNSpotterList::update() {
   qDebug() << "Update spotter list.";
   _spotter.clear();
-  QNetworkRequest request(QUrl("http://reversebeacon.net/nodes/detail_json.php"));
+  QNetworkRequest request(QUrl("https://reversebeacon.net/nodes/detail_json.php"));
 	_WebCtrl.get(request);
 }
 
