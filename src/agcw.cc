@@ -1,7 +1,7 @@
 #include "agcw.hh"
 
 AGCWMembers::AGCWMembers(QObject *parent)
-  : WebFile("agcwlist.txt", QUrl("https://www.agcw.de/wp-content/persist/Mitgliederliste.csv"), 7, parent),
+  : WebFile("agcwlist.txt", QUrl("https://www.agcw.de/wp-content/persist/Mitglieder.csv"), 7, parent),
     _members()
 {
   connect(this, SIGNAL(updated()), this, SLOT(listUpdated()));
