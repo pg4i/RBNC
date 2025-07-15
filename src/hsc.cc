@@ -33,7 +33,8 @@ HSCMembers::listUpdated()
         mem.shsc = 1;
       if ("-" != row.at(5))
         mem.ehsc = 1;
-      _members.insert(row.at(1), mem);
+      if ("M" == row.at(0))
+        _members.insert(row.at(1), mem);
     }
   } while (! line.isEmpty());
 
