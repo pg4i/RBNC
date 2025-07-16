@@ -97,7 +97,7 @@ TrayIcon::onNewMembership(const Spot &spot, const Membership &memb) {
 
   Membership notify = Settings().notifyOnNewMembership() & memb;
   QString memberships = notify.names().join(", ").toUpper();
-  qDebug() << "Notify new" << memberships << "...";
+  qDebug() << "Notify new" << memberships << "..." << spot.full_call;
   _popup->setPopupText(tr("New %1 <b>%2</b> on <b>%3kHz</b> (%4dB, %5WPM)")
                        .arg(memberships).arg(spot.full_call)
                        .arg(spot.freq).arg(spot.db).arg(spot.wpm));
