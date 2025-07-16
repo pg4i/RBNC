@@ -335,7 +335,7 @@ accept:
   LogFile::Match logmatch = _logfile.isNew(spot.full_call, freq2band(spot.freq), spot.mode);
   switch (logmatch) {
     case LogFile::NEW_DXCC:
-      qDebug() << "Emit new DXCC...";
+      qDebug() << "Emit new DXCC..." << spot.full_call;
       emit newDXCC(spot);
       break;
     case LogFile::NEW_BAND:
